@@ -1,0 +1,605 @@
+/*
+    //////////
+    Font Families
+    //////////
+*/
+
+@font-face {
+    font-family: serifDisplay;
+    src: url(../fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: barlow;
+    src: url(../fonts/Barlow/Barlow-Regular.ttf);
+}
+
+@font-face {
+    font-family: barlow-bold;
+    src: url(../fonts/Barlow/Barlow-Bold.ttf);
+}
+
+h1,
+h2,
+h3{
+   font-family: serifDisplay, serif; 
+
+}
+
+p{
+    font-family: barlow, sans-serif;
+}
+
+figcaption{
+    font-family: barlow, sans-serif;
+}
+
+h2,h3{
+    padding: 2rem 0.5rem;
+}
+
+button{
+    font-family: barlow, sans-serif;
+}
+
+
+
+
+/*
+    //////////
+    Link Handling
+    //////////
+*/
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+li a{
+    font-family: barlow, sans-serif;
+}
+
+
+/*
+    //////////
+    Hamburger Menu
+    //////////
+*/
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+}
+
+#main-menu {
+  display: block;
+  height: 100px;
+  width: 100%;
+  background: #3D0E61;
+  margin: 0px;  
+  z-index: 9;
+}
+
+#main-menu ul {
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 9;
+}
+
+#main-menu li {
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+#main-menu a {
+  color: #B9FAF8;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#main-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input{
+  display: none;
+}
+
+#hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Cabin', Sans-serif;
+    background: linear-gradient(
+      to bottom, 
+      #3D0E61, #3D0E61 20%, 
+      white 20%, white 40%, 
+      #3D0E61 40%, #3D0E61 60%, 
+      white 60%, white 80%, 
+      #3D0E61 80%, #3D0E61 100%
+    );
+}
+
+#hamburger-menu #sidebar-menu {
+    visibilty: hidden;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #3D0E61;
+    transition: 0.3s;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#hamburger-menu h3 {
+  color: #B9FAF8;
+  font-size: 2.2rem;
+}
+
+#hamburger-menu ul {
+  padding-left: 0px;
+}
+
+#hamburger-menu li {
+  list-style-type: none;
+  line-height: 3rem;
+}
+
+#hamburger-menu a {
+  color: #B9FAF8;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+    visibility: visible;
+    left: 0;
+}
+#hamburger-input:checked ~ .overlay{
+   visibility: visible;
+  opacity: 0.4;
+}
+
+
+@media screen and (max-width: 750px) {
+  #main-menu {
+    display: none;
+  }
+  #hamburger-menu {
+    display: inline;
+  }
+}
+
+
+
+/*
+    //////////
+    Header & Nav Menu
+    //////////
+*/
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0.5rem;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+li a::after {
+    content: " ";
+    display: block;
+
+    width: 0%;
+    height: 1px;
+
+    background-color: #000;
+
+    transition: width 0.4s;
+}
+
+ li a:hover::after {
+    width: 100%;
+    
+}
+
+.current-page a{
+    font-family: barlow-bold, sans-serif;
+}
+
+@media(min-width:37.5em){
+    nav ul{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: end;
+    }
+
+    ul li{
+        padding: 0.5rem;
+    }
+}
+
+@media(min-width:56.25em){
+
+    nav{
+        margin: 0 2rem;
+    }
+    ul li{
+        padding: 1rem;
+    }
+}
+
+
+
+
+/*
+    //////////
+    Main
+    //////////
+*/
+
+main{
+    background-color: #F6F6F6;
+}
+
+.site-body{
+    padding: 0.5rem;
+}
+
+
+/*
+    //////////
+    Footer
+    //////////
+*/
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+footer p{
+    font-size: 1rem;
+}
+
+.social-links img{
+    height:1rem;
+    margin: 0.25rem;
+}
+
+@media(min-width:56.25em){
+    footer{
+        margin: 0 2rem;
+    }
+}
+
+
+
+
+/*
+    //////////
+    Home Page
+    //////////
+*/
+
+
+.banner-title{
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+.banner{
+    margin: 2rem 0.5rem;
+    position: relative;
+    text-align: center;
+    z-index: 999;
+}
+
+.banner img{
+    object-fit: cover;
+    display: block;
+}
+
+.banner:hover{
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+}
+
+@media(min-width:56.25em){
+    .banner{
+        margin: 2rem;
+    }
+    .banner img{
+        height: 30rem;
+        width: 100%;
+    }
+
+    .banner h2{
+        font-size: 5rem;
+    }
+}
+
+
+
+
+
+
+
+/*
+    //////////
+    Events Page
+    //////////
+*/
+
+article{
+    display: inline-block;
+}
+
+.show-more-text{
+    padding: 0.5rem;
+}
+
+.show-more-text h3{
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.show-more-text button{
+    border: none;
+    background-color: rgb(124, 41, 41);
+    color: white;
+    padding: 0.5rem;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.show-more-text button:hover{
+    background-color: rgb(97, 41, 41);
+    opacity: 1;
+}
+
+#more{
+    display: none ;
+}
+
+@media(min-width:43.75em){
+
+    .events{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 0.5rem 3rem 0.5rem;
+    }
+
+    .events img{
+        width: 50%;
+        object-fit: cover;
+    }
+
+    .show-more-text{
+        width: 50%;
+        padding: 1rem;
+        align-items: center;
+    }
+
+}
+
+@media(min-width:62.5em){
+    #dots{
+        display: none;
+    }
+    #more{
+        display: inline-block;
+    }
+    #myBtn{
+        display: none;
+    }
+}
+
+
+/*
+    //////////
+    Portraits Page
+    //////////
+*/
+
+/* .portrait-grid{
+    margin: 0 auto;
+} */
+
+.portrait-img{
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+.portrait-img img{
+    display: block;
+}
+
+article p{
+    text-align: center;
+}
+
+@media(min-width:25em){
+    .portrait-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .portrait-img img{
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+}
+
+@media(min-width:50em){
+
+    .portrait-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+ 
+    .portrait-img img{
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
+
+
+
+
+/*
+    //////////
+    About Page
+    //////////
+*/
+
+.link{
+    color: rgb(124, 41, 41);;
+    font-family: barlow-bold;
+}
+
+.link:hover{
+    color: rgb(97, 41, 41);
+    transition: all 0.3s ease;
+}
+
+@media(min-width: 37.5em){
+    .about-hero img{
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .about-text-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .about-me{
+        /* width: 50%; */
+        margin: 1rem 0;
+    }
+}
+
+@media(min-width: 50em){
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    .about-site-body{
+        padding: 2rem;
+        display: grid;
+        grid-template-areas: 
+        "a . b b"
+        "a . c c";
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-hero{
+        grid-area: a;
+    }
+
+    .about-hero img{
+        object-fit: cover;
+        /* object-position: 0 10%; */
+        width: 100%;
+        /* height: 30rem; */
+        margin: 0;
+    }
+
+    #who-am-i{
+        grid-area: b;
+    }
+
+    #contact-me{
+        grid-area: c;
+    }
+
+    .about-me{
+        width: 100%;
+    }
+
+    .about-site-body .show-more-text{
+        width: 100%;
+    }
+}
+
+
+/*
+    //////////
+    Essays Page
+    //////////
+*/
+
+.essays{
+    margin: 2rem 0;
+}
+
+@media(min-width:56.25em){
+
+    .essays{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+    }
+
+
+    .essays .banner{
+        width: 35rem;
+        height: 35rem;
+    }
+
+    .essays h3{
+        font-size: 2.5rem;
+    }
+}

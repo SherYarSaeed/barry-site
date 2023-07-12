@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barry Ramov</title>
+
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="styles/normalize-fwd.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Javascript -->
+    <script src="js/functions.js"></script> 
+</head>
+<body>
+
+    <header class="site-header">
+        <nav>
+            <h1><a href="index.html">barry ramov</a></h1>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="photo-essays.html">photo essays</a></li>
+                <li><b><a href="events.html">events</a></b></li>
+                <li><a href="portraits.html">portraits</a></li>
+                <li><a href="about.html">about</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="site-body">
+
+        <h2>events</h2>
+
+        <section class="events">
+            <img src="images/events/wedding.jpg" alt="">
+
+            <div class="show-more-text" data-event="wedding">
+                <h3>wedding photography</h3>
+
+                <p>
+                    As a wedding photographer, I am committed to creating timeless and captivating images that will forever preserve the beauty and joy of your special day. With my artistic vision, attention to detail, and dedication to capturing authentic emotions, I offer a<span id="dots">...</span><span id="more"> service that goes beyond simply taking photographs.
+                <br>
+                <br>
+                    I strive to create a visual narrative that tells your unique love story, ensuring that every cherished moment, from the tender glances to the uproarious laughter, is beautifully documented. With a blend of candid shots and posed portraits, I will capture the essence of your wedding day, allowing you to relive those precious memories for a lifetime.
+                <br>
+                <br>
+                    By choosing my services, you are not just hiring a photographer but a storyteller who will document your love and create stunning imagery that will be treasured by generations to come. </span>
+                </p>
+                
+                <button onclick="readMore('wedding')" id="myBtn">Read more</button>
+            </div>
+        </section>
+
+        <section class="events">
+            <img src="images/events/concert.jpg" alt="">
+
+            <div class="show-more-text" data-event="concert">
+                <h3>concert photography</h3>
+
+                <p>
+                    I bring a passion for music and a keen eye for capturing the energy and atmosphere of live performances. With years of experience in the music industry, I understand the importance of capturing the raw emotions, the electrifying stage presence, and the intense connection between the artists and their audience. My goal is to<span id="dots">...</span><span id="more"> create images that transport viewers to the heart of the concert, allowing them to relive the unforgettable moments and feel the music pulsating through their veins.
+                <br> 
+                <br>
+                    From the sweat-drenched rock shows to the soulful performances in intimate venues, I specialize in capturing the essence and spirit of each unique musical experience. By choosing my services, you are not only investing in stunning concert photography but also in an artist who is dedicated to immortalizing the magic and excitement of live music, ensuring that your concert memories will last a lifetime.</span>
+                </p>
+
+                <button onclick="readMore('concert')" id="myBtn" class="myBtn">Read more</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Created by <a class="link" href="https://sheryar.ca/">Sher Yar Saeed</a></p>
+
+        <section class="social-links">
+            <img src="icons/facebook.svg" alt="Facebook">
+            <img src="icons/instagram.svg" alt="Instagram">
+            <img src="icons/twitter.svg" alt="Twitter">
+        </section>
+    </footer>
+    
+</body>
+</html>
