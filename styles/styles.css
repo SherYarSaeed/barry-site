@@ -130,7 +130,7 @@ li a::after {
     transition: all 0.3s ease;
 }
 
-body{
+html, body{
     overflow-x: hidden;
 }
 
