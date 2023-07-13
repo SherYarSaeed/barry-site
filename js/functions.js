@@ -1,3 +1,5 @@
+
+// Read More function to make paragraphs shorter for mobile
 function readMore(event) {
   let dots = document.querySelector(`.show-more-text[data-event="${event}"] #dots`);
     let moreText = document.querySelector(`.show-more-text[data-event="${event}"] #more`);
@@ -13,3 +15,30 @@ function readMore(event) {
       moreText.style.display = "inline";
     }
   } 
+
+
+  // Function for hamburger menu
+  const navSlide = () =>{
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    // Toggle Navigation
+    burger.addEventListener('click',()=>{
+      nav.classList.toggle('nav-active');
+
+    // Animate Links
+      navLinks.forEach((link, index)=>{
+        if(link.style.animation){
+          link.style.animation = ''
+        }else{
+          link.style.animation = `navLinkFade 0.5s ease forwards ${index / 5}s`;
+        }
+      })
+
+    // Animate Burger
+      burger.classList.toggle('toggle');
+    });
+  }
+
+  navSlide();
